@@ -1,13 +1,15 @@
 <b>===== LIST OF NOTES =====</b>
 
-<ul>
-	<li *ngFor="let data of datadariglob">
-		<B>JUDUL : {{data.judul}}</B><br>
-		<B>TANGGAL : {{data.tanggal}}</B><br>
-		<B>FAV : {{data.fav}}</B><br>
-		<textarea rows="10" cols="50" disabled=true>
+<ul *ngFor="let data of datadariglob ">
+  <B>JUDUL : {{data.judul}}</B><br>
+  <B>TANGGAL : {{data.tanggal}}</B><br>
+  <textarea rows="10" cols="50" disabled=true>
       {{data.isi}}
     </textarea><br>
-
-		<button (click)="fav(data.id)">favorite</button>
+  <p *ngIf="data.fav==1">
+    favorited
+  </p>
+  <p *ngIf="data.fav==0">
+    <button (click)="fav(data.id)">favorite</button>
+  </p>
 </ul>

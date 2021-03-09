@@ -16,15 +16,21 @@ export class Halaman1Component implements OnInit {
   output = "";
   inputjudul = "";
   inputisi = "";
-  inputtanggal: Date;
+  inputtgl = "";
+  inputbln = "";
+  inputthn = "";
+  date = "";
 
   ADD() {
-    if (this.inputjudul != "" && this.inputisi != "" && !this.inputtanggal) {
-      this.variableglobal.addData(
-        this.inputjudul,
-        this.inputisi,
-        this.inputtanggal
-      );
+    if (
+      this.inputjudul != "" &&
+      this.inputisi != "" &&
+      this.inputtgl != "" &&
+      this.inputbln != "" &&
+      this.inputthn != ""
+    ) {
+      this.date = this.inputtgl + "/" + this.inputbln + "/" + this.inputthn;
+      this.variableglobal.addData(this.inputjudul, this.inputisi, this.date);
       this.Clear();
       this.output = " success to add the data";
     } else {

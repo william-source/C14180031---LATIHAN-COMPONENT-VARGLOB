@@ -17,7 +17,7 @@ export class Halaman2Component implements OnInit {
   datadariglob: any;
 
   fav(pid) {
-    this.datadariglob[pid].id = "1";
+    this.datadariglob[pid].fav = "1";
     this.variableglobal.updateData(this.datadariglob);
     this.datadariglob = this.variableglobal.getData();
   }

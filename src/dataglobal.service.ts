@@ -9,7 +9,7 @@ export class DataglobalService {
   private DATA = [
     {
       id: 0,
-      tanggal: "",
+      tanggal: "10/10/10",
       judul: "data_dummy",
       isi: "first_note",
       fav: "0"
@@ -20,7 +20,7 @@ export class DataglobalService {
     return this.DATA;
   }
 
-  public addData(pjudul: String, pisi: String, ptanggal: Date) {
+  public addData(pjudul: String, pisi: String, ptanggal: String) {
     this.datatambah = {
       id: this.noid,
       tanggal: ptanggal,

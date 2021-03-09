@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
+import { DataglobalService } from "../dataglobal.service";
 
 @Component({
   selector: "app-halaman3",
